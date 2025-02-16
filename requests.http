@@ -1,0 +1,33 @@
+### Get all todos
+GET http://localhost:5000/todos
+Content-Type: application/json
+
+### Add a new todo (without completed key, should default to false)
+POST http://localhost:5000/todos
+Content-Type: application/json
+
+{
+    "todo": "Learn REST API"
+}
+
+### Add a new todo (explicitly setting completed to true)
+POST http://localhost:5000/todos
+Content-Type: application/json
+
+{
+    "todo": "Buy a Book",
+    "completed": true
+}
+
+### Update a todo (replace `<id>` with an actual ID from GET request)
+PUT http://localhost:5000/todos/67b0930655b43e4e997d75a2
+Content-Type: application/json
+
+{
+    "todo": "Updated Task",
+    "completed": false
+}
+
+### Delete a todo (replace `<id>` with an actual ID from GET request)
+DELETE http://localhost:5000/todos/67b0930655b43e4e997d75a3
+Content-Type: application/json
